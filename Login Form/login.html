@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head> 
+        <meta charset="utf-8">
+        <title>login com Animação</title> 
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form class="box" action="index.html" method="post">
+        <h1>Login Usuario</h1>
+
+        <input type="text" name="" placeholder="Login" id="login"> 
+        <input type="password" name="" placeholder="Senha" id="senha"> 
+        <input type="submit" onclick="logar(); return false">
+</form>
+
+
+
+<script>
+    function logar(){ // função logar
+//variáveis
+        var login = document.getElementById('login').value 
+        var senha = document.getElementById('senha').value
+        if(login == "admin"&& senha == "admin"){
+
+        alert('login com sucesso'); 
+
+        location.href = "home.html"; 
+        }
+else{
+        alert('usuario ou senha incorretos');
+        document.getElementById('login').value='';
+        document.getElementById('senha').value='';
+        document.getElementById('login').autofocus='';
+
+        }
+
+    }
+
+</script>
+
+
+
+
+</body>
+</html>
